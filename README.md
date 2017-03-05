@@ -1,3 +1,31 @@
+Projekt z db systémů
+===
+
+• conn_log(log_key, sim_imsi, time, car_key, pda_imei, gsmnet_id, method, program_ver)
+- log_key (int): primární klíč, nemá další význam, klasický auto_increment
+- sim_imsi (int): identifikátor SIM karty
+- time (datetime): čas
+- car_key (int): identifikátor auta
+- pda_imei (int): identifikátor PDA
+- gsmnet_id (int): identifikátor sítě, prefix 230 znamená "cz"
+- method (int): UDP / TCP
+- program_ver (string): verze programu
+
+Vzniká zde záznam po každém připojení zařízení
+-- občas tam chybí záznamy o gsmnet_id / pda_imei... čudné
+
+• service_log(service_key, car_key, time, app_run_time, pda_run_time, device)
+- service_key (int): primární klíč, nemá další význam (v datech jsou díry neví někdo proč?)
+- car_key (int): stejné jako conn_log.car_key
+- time (datetime): čas vytvoření záznamu
+- app_run_time (float): počet hodin po které je appka zapnutá
+- pda_run_time (float): počet hodin po které je zařízení zapnutné
+- device (string): typ zařízení
+
+Do té tabulky se dávají pouze inserty, periodicky každých X minut ("furt běžím, furt běžím...")
+-- Nevidím tam žádný identifikátor kromě `car_key`, takže se to bude asi muset podle toho (asi nemůžeš mít dvě PDA v jednom autě)
+
+=====================================================
 restore backupu:
  psql -h db.fi.muni.cz pgdb xbenkov1 < db-95-conn.backup
 
