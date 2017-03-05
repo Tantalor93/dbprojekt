@@ -62,6 +62,12 @@ SELECT program_ver, COUNT(app_run_time) FROM xbenkov1.conn_log INNER JOIN xbenko
 SELECT pda_imei, sum(pda_run_time) FROM xbenkov1.conn_log INNER JOIN xbenkov1.service_log ON xbenkov1.conn_log.car_key = xbenkov1.service_log.car_key GROUP BY pda_imei;
 `
 
+**pro kazde zarizeni zjistit, kdy bylo uvedeno do provozu**:
+
+`
+SELECT pda_imei, min(xbenkov1.service_log.time) FROM xbenkov1.conn_log INNER JOIN xbenkov1.service_log ON xbenkov1.conn_log.car_key = xbenkov1.service_log.car_key GROUP BY pda_imei;
+`
+
 **zjisteni bezicich dotazu**:
 
 `
