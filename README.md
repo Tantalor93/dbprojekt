@@ -49,3 +49,21 @@ select * from pg_stat_activity where usename = 'xbenkov1';
 
 pustit soubor s SQL jako background task:
 nohup psql -h db.fi.muni.cz pgdb xbenkov1 -f p.sql > result2.log 2>&1 &
+
+========================================================
+Ukazka vytvoreni materialized view:
+
+pro kazdou verzi programu zjistit pocet restartu jeho programu:
+CREATE MATERIALIZED VIEW number_of_restarts AS SELECT pda_imei, COUNT(app_run_time) FROM public.conn_log INNER JOIN public.service_log ON public.conn_log.car_key = public.service_log.car_key WHERE app_run_time >= 0 AND app_run_time < 1 GROUP BY pda_imei;
+
+data ve vytvorenem view lze obnovit pomoci:
+REFRESH MATERIALIZED VIEW number_of_restarts;
+
+vysledky z mat. view se ziskavaji klasicky selectem:
+SELECT * FROM number_of_restarts;
+
+jednoduche pozorovani casu:
+puvodni select: ~1min
+vytvoreni mat. view: ~1min
+refresh: ~1min
+select z mat. view: ~700ms
