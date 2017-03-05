@@ -67,3 +67,5 @@ puvodni select: ~1min
 vytvoreni mat. view: ~1min
 refresh: ~1min
 select z mat. view: ~700ms
+
+do materialized view nelze insertovat
