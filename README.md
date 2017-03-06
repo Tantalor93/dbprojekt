@@ -98,6 +98,15 @@ select * from pg_stat_activity where usename = 'xbenkov1';
 nohup psql -h db.fi.muni.cz pgdb xbenkov1 -f p.sql > result2.log 2>&1 &
 `
 
+**analyza dotazu (napr. jak dlouho bezel)**
+
+```sql
+EXPLAIN ANALYSE
+SELECT COUNT(DISTINCT(pda_imei)), program_ver
+FROM xbenkov1.conn_log
+GROUP BY program_ver;
+```
+
 ========================================================
 **Ukazka vytvoreni materialized view**:
 
