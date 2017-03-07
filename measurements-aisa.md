@@ -29,3 +29,9 @@
 | Nr  |Total Runtime |
 | --- | ------------------ |
 | 1  | 3245993.394 ms      | 
+
+**vytvoreni materialized view pro kazde zarizeni zjistit pocet restartu programu:**  
+| Nr  |Total Runtime |
+| --- | ------------------ |
+| 1  | 84536.085 ms      | 
+
