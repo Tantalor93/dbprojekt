@@ -94,9 +94,17 @@ select * from pg_stat_activity where usename = 'xbenkov1';
 
 **pustit soubor s SQL jako background task**:
 
+ale predtim se jeste musi nahrat do env property `PGPASSWORD` heslo k DB userovi
+
+`
+export PGPASSWORD=HESLO;
+`
+
 `
 nohup psql -h db.fi.muni.cz pgdb xbenkov1 -f p.sql > result2.log 2>&1 &
 `
+
+vysledek dotazu ze souboru p.sql je v souboru result2.log
 
 **analyza dotazu (napr. jak dlouho bezel)**
 
