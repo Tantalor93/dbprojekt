@@ -56,3 +56,8 @@
 | --- | ------------------ |
 | 1  | 4824413.656 ms      | 
 
+**vytvoreni materialized view pro kazde zarizeni zjistit, kdy bylo uvedeno do provozu:**
+
+| Nr  |Total Runtime |
+| --- | ------------------ |
+| 1  | 3260212.639 ms      | 
