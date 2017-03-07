@@ -39,13 +39,28 @@ AISA Avarage execution time:
 
 Nr | Planning time (ms) | Execution time (s) | AISA Planning time (ms) | AISA Execution time (s) |
 --- | ------------------ | ------------------- | --- | ---
+1 | 0.265 | 77.405 | |
+2 | 0.232 | 79.504 | |
+3 | 0.260 | 78.089 | |
+4 | 0.225 | 78.189 | |
+5 | 0.218 | 76.427 | |
+
+PC-1 Avarage planning time: 0.24 ms  
+PC-1 Avarage execution time: 77.922 s    
+AISA Avarage planning time:   
+AISA Avarage execution time:  
+
+**pro kazde zarizeni zjistit kolik hodin bylo pouzivano:**
+
+Nr | Planning time (ms) | Execution time (s) | AISA Planning time (ms) | AISA Execution time (s) |
+--- | ------------------ | ------------------ | --- | ---
 1 | | | |
 2 | | | |
 3 | | | |
 4 | | | |
 5 | | | |
 
-PC-1 Avarage planning time:   
+PC-1 Avarage planning time:  
 PC-1 Avarage execution time:  
 AISA Avarage planning time:   
 AISA Avarage execution time:  
