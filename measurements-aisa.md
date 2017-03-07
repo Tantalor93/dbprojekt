@@ -30,6 +30,12 @@
 | --- | ------------------ |
 | 1  | 3245993.394 ms      | 
 
+**vytvoreni materialized view pro kazdou verzi programu zjistit pocty ruznych zarizeni:**
+
+| Nr  |Total Runtime |
+| --- | ------------------ |
+| 1  | 44566.083 ms      |
+
 **vytvoreni materialized view pro kazde zarizeni zjistit pocet restartu programu:**  
 
 | Nr  |Total Runtime |
