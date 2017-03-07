@@ -7,52 +7,60 @@ SSD Samsung 850 EVO 250GB
 
 **pro kazdou verzi programu zjistit pocty ruznych zarizeni:**  
 
-| Nr  | Planning time (ms) | Execution time (s) |
-| --- | ------------------ | ------------------ |
-| 1  | 0.086              | 18.925 |
-| 2  | 0.084              | 18.231 |
-| 3  | 0.070              | 18.370 |
-| 4  | 0.082              | 18.480 | 
-| 5  | 0.059              | 18.356 |
+| Nr  | PC-1 Planning time (ms) | PC-1 Execution time (s) | AISA Planning time (ms) | AISA Execution time (s) |
+| --- | ------------------ | ------------------ | --- | --- |
+| 1  | 0.086              | 18.925 | | |
+| 2  | 0.084              | 18.231 | | |
+| 3  | 0.070              | 18.370 | | |
+| 4  | 0.082              | 18.480 | | |
+| 5  | 0.059              | 18.356 | | | 
 
-Avarage planning time: 0.0762 ms  
-Avarage execution time: 18.4724 s  
+PC-1 Avarage planning time: 0.0762 ms  
+PC-1 Avarage execution time: 18.4724 s  
+AISA Avarage planning time:  
+AISA Avarage execution time:  
 
 **pro kazde zarizeni zjistit pocet restartu programu:**  
 
-Nr | Planning time (ms) | Execution time (s)  
---- | ----------------- | -------------------  
-1 | | 
-2 | |
-3 | |
-4 | | 
-5 | |
+Nr | PC-1 Planning time (ms) | PC-1 Execution time (s) | AISA Planning time (ms) | AISA Execution time (s) |
+--- | ----------------- | -------------------  | --- | ---
+1 | 6.191 | 83.694 | |
+2 | 0.334 | 80.128 | |
+3 | 0.286 | 80.342 | |
+4 | 0.233 | 81.117 | |
+5 | 0.264 | 81.385 | |
 
-Avarage planning time:   
-Avarage execution time:  
+PC-1 Avarage planning time: 1.461 ms  
+PC-1 Avarage execution time: 81.333 s  
+AISA Avarage planning time:   
+AISA Avarage execution time:  
 
 **pro kazdou verzi programu zjistit pocet restartu jeho programu:**
 
-Nr | Planning time (ms) | Execution time (s)
---- | ------------------ | -------------------
-1 | | 
-2 | |
-3 | |
-4 | | 
-5 | |
+Nr | Planning time (ms) | Execution time (s) | AISA Planning time (ms) | AISA Execution time (s) |
+--- | ------------------ | ------------------- | --- | ---
+1 | | | |
+2 | | | |
+3 | | | |
+4 | | | |
+5 | | | |
 
-Avarage planning time:   
-Avarage execution time:  
+PC-1 Avarage planning time:   
+PC-1 Avarage execution time:  
+AISA Avarage planning time:   
+AISA Avarage execution time:  
 
 **pro kazde zarizeni zjistit, kdy bylo uvedeno do provozu:**
 
-Nr | Planning time (ms) | Execution time (s)
---- | ------------------ | -------------------
-1 | | 
-2 | |
-3 | |
-4 | | 
-5 | |
+Nr | Planning time (ms) | Execution time (s) | AISA Planning time (ms) | AISA Execution time (s) |
+--- | ------------------ | ------------------ | --- | ---
+1 | | | |
+2 | | | |
+3 | | | |
+4 | | | |
+5 | | | |
 
-Avarage planning time:  
-Avarage execution time:  
+PC-1 Avarage planning time:  
+PC-1 Avarage execution time:  
+AISA Avarage planning time:   
+AISA Avarage execution time:  
