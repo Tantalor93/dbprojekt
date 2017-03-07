@@ -32,6 +32,7 @@ Avarage planning time:
 Avarage execution time:  
 
 **pro kazdou verzi programu zjistit pocet restartu jeho programu:**
+
 Nr | Planning time (ms) | Execution time (s)
 --- | ------------------ | -------------------
 1 | | 
@@ -44,6 +45,7 @@ Avarage planning time:
 Avarage execution time:  
 
 **pro kazde zarizeni zjistit, kdy bylo uvedeno do provozu:**
+
 Nr | Planning time (ms) | Execution time (s)
 --- | ------------------ | -------------------
 1 | | 
@@ -52,5 +54,5 @@ Nr | Planning time (ms) | Execution time (s)
 4 | | 
 5 | |
 
-Avarage planning time: 
+Avarage planning time:  
 Avarage execution time:  
