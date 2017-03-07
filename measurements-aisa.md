@@ -48,3 +48,9 @@
 | --- | ------------------ |
 | 1  | 83546.318 ms      | 
 
+**vytvoreni materialized view pro kazde zarizeni zjistit kolik hodin bylo pouzivano:**
+
+| Nr  |Total Runtime |
+| --- | ------------------ |
+| 1  | 4824413.656 ms      | 
+
