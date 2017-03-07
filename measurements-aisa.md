@@ -10,7 +10,7 @@
 
 | Nr  |Total Runtime |
 | --- | ------------------ |
-| 1  | 89732.557 ms        | 
+| 1  | 5524.591 ms        | 
 
 **pro kazdou verzi programu zjistit pocet restartu jeho programu:**
 
