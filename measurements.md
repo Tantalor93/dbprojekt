@@ -55,7 +55,7 @@ AISA Avarage execution time:
 Nr | Planning time (ms) | Execution time (s) | AISA Planning time (ms) | AISA Execution time (s) |
 --- | ------------------ | ------------------ | --- | ---
 1 | 1.283 | 4163.448 | |
-2 | | | |
+2 | 0.291 | 4342.528 | |
 3 | | | |
 4 | | | |
 5 | | | |
