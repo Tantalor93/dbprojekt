@@ -30,6 +30,8 @@
 | --- | ------------------ |
 | 1  | 3245993.394 ms      | 
 
+========================================================================================
+
 **vytvoreni materialized view pro kazdou verzi programu zjistit pocty ruznych zarizeni:**
 
 | Nr  |Total Runtime |
@@ -46,7 +48,7 @@
 
 | Nr  |Total Runtime |
 | --- | ------------------ |
-| 1  | 83546.318 ms      | 
+| 1  | 5486.494 ms      | 
 
 **vytvoreni materialized view pro kazde zarizeni zjistit kolik hodin bylo pouzivano:**
 
