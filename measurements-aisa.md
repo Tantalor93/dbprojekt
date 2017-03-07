@@ -10,7 +10,7 @@
 
 | Nr  |Total Runtime |
 | --- | ------------------ |
-| 1  | 5524.591 ms        | 
+| 1  | 5551.907 ms       | 
 
 **pro kazdou verzi programu zjistit pocet restartu jeho programu:**
 
@@ -40,7 +40,7 @@
 
 | Nr  |Total Runtime |
 | --- | ------------------ |
-| 1  | 84536.085 ms      | 
+| 1  | 5524.591 ms      | 
 
 **vytvoreni materialized view pro kazdou verzi programu zjistit pocet restartu jeho programu:**
 
