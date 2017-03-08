@@ -16,7 +16,7 @@
 
 | Nr  |Total Runtime |
 | --- | ------------------ |
-| 1  | 5504.425        |  
+| 1  | 5504.425 ms       |  
 
 **pro kazde zarizeni zjistit kolik hodin bylo pouzivano:**
 
