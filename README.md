@@ -132,7 +132,7 @@ CREATE MATERIALIZED VIEW number_of_restarts AS SELECT pda_imei, COUNT(app_run_ti
 FROM public.conn_log
 INNER JOIN public.service_log ON public.conn_log.car_key = public.service_log.car_key
 WHERE app_run_time >= 0
-  AND app_run_time < 1 GROUP BY pda_imei;
+  AND app_run_time < 0.17 GROUP BY pda_imei;
 ```
 
 **data ve vytvorenem view lze obnovit pomoci**:
