@@ -68,6 +68,14 @@ WHERE app_run_time >= 0
 GROUP BY program_ver;
 ```
 
+**pro kazdou verzi programu zjistit nejdelší běh zařízení**:
+```sql
+SELECT program_ver, max(pda_run_time)
+FROM xbenkov1.conn_log
+INNER JOIN xbenkov1.service_log ON xbenkov1.conn_log.car_key = xbenkov1.service_log.car_key
+GROUP BY program_ver;
+```
+
 **pro kazde zarizeni zjistit kolik hodin bylo pouzivano**:
 
 ```sql
