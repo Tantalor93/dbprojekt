@@ -88,9 +88,8 @@ GROUP BY pda_imei;
  **pro kazde zarizeni zjistit, kdy bylo uvedeno do provozu**:
 
 ```sql
-SELECT pda_imei, min(xbenkov1.service_log.time)
+SELECT pda_imei, min(xbenkov1.conn_log.time)
 FROM xbenkov1.conn_log
-INNER JOIN xbenkov1.service_log ON xbenkov1.conn_log.car_key = xbenkov1.service_log.car_key
 GROUP BY pda_imei;
 ```
 
