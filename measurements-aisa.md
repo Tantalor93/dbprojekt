@@ -18,12 +18,6 @@
 | --- | ------------------ |
 | 1  | 5504.425 ms       |  
 
-**pro kazde zarizeni zjistit kolik hodin bylo pouzivano:**
-
-| Nr  |Total Runtime |
-| --- | ------------------ |
-| 1  | 4848096.543 ms      | 
-
 **pro kazde zarizeni zjistit, kdy bylo uvedeno do provozu:**
 
 | Nr  |Total Runtime |
@@ -49,12 +43,6 @@
 | Nr  |Total Runtime |
 | --- | ------------------ |
 | 1  | 5486.494 ms      | 
-
-**vytvoreni materialized view pro kazde zarizeni zjistit kolik hodin bylo pouzivano:**
-
-| Nr  |Total Runtime |
-| --- | ------------------ |
-| 1  | 4824413.656 ms      | 
 
 **vytvoreni materialized view pro kazde zarizeni zjistit, kdy bylo uvedeno do provozu:**
 
