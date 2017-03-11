@@ -76,15 +76,6 @@ INNER JOIN xbenkov1.service_log ON xbenkov1.conn_log.car_key = xbenkov1.service_
 GROUP BY program_ver;
 ```
 
-**pro kazde zarizeni zjistit kolik hodin bylo pouzivano**:
-
-```sql
-SELECT pda_imei, sum(pda_run_time)
-FROM xbenkov1.conn_log
-INNER JOIN xbenkov1.service_log ON xbenkov1.conn_log.car_key = xbenkov1.service_log.car_key
-GROUP BY pda_imei;
-```
-
  **pro kazde zarizeni zjistit, kdy bylo uvedeno do provozu**:
 
 ```sql
