@@ -18,6 +18,12 @@
 | --- | ------------------ |
 | 1  | 5504.425 ms       |  
 
+**pro kazdou verzi programu zjisti nejdelsi beh zarizeni:**
+
+| Nr  |Total Runtime |
+| --- | ------------------ |
+| 1  | 3703764.778 ms       |
+
 **pro kazde zarizeni zjistit, kdy bylo uvedeno do provozu:**
 
 | Nr  |Total Runtime |
