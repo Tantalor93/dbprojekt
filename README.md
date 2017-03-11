@@ -84,6 +84,14 @@ FROM xbenkov1.conn_log
 GROUP BY pda_imei;
 ```
 
+**pro kazde auto, zjistit pocet ruznych zarizeni**:
+
+```sql
+SELECT count(distinct(pda_imei)), car_key 
+FROM xbenkov1.conn_log 
+GROUP BY car_key;
+```
+
 **zjisteni bezicich dotazu**:
 
 ```sql
