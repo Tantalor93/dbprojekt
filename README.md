@@ -41,6 +41,7 @@ psql -h db.fi.muni.cz pgdb xbenkov1
 **pro kazdou verzi programu zjistit pocty ruznych zarizeni**:
 
  ```sql
+
  SELECT COUNT(DISTINCT(pda_imei)), program_ver
  FROM xbenkov1.conn_log
  GROUP BY program_ver;
@@ -60,11 +61,18 @@ GROUP BY pda_imei;
 **pro kazdou verzi programu zjistit pocet restartu jeho programu**:
 
 ```sql
-SELECT program_ver, COUNT(app_run_time)
-FROM xbenkov1.conn_log
-INNER JOIN xbenkov1.service_log ON xbenkov1.conn_log.car_key = xbenkov1.service_log.car_key
-WHERE app_run_time >= 0
-  AND app_run_time < 0.17
+SELECT program_ver, COUNT(xbenkov1.service_log.app_run_time) 
+FROM (
+      SELECT program_ver, car_key, min, lead(min,1,now()) OVER (partition by car_key ORDER BY min) 
+      FROM (
+            SELECT program_ver, car_key, min(time) 
+            FROM xbenkov1.conn_log 
+            GROUP BY program_ver, car_key
+            ) t
+     ) t1 
+INNER JOIN xbenkov1.service_log ON t1.car_key = xbenkov1.service_log.car_key 
+                                AND xbenkov1.service_log.time >= t1.min AND xbenkov1.service_log.time <= lead 
+WHERE app_run_time <= 0.17 
 GROUP BY program_ver;
 ```
 
