@@ -50,11 +50,18 @@ psql -h db.fi.muni.cz pgdb xbenkov1
 **pro kazde zarizeni zjistit pocet restartu programu**:
 
 ```sql
-SELECT pda_imei, COUNT(app_run_time)
-FROM xbenkov1.conn_log
-INNER JOIN xbenkov1.service_log ON xbenkov1.conn_log.car_key = xbenkov1.service_log.car_key
-WHERE app_run_time >= 0
-  AND app_run_time < 0.17
+SELECT pda_imei, COUNT(xbenkov1.service_log.app_run_time)
+FROM (
+      SELECT pda_imei ,car_key, min, lead(min,1,now()) OVER (partition by car_key ORDER BY min)
+      FROM (
+            SELECT  pda_imei, car_key, min(time)
+            FROM xbenkov1.conn_log
+            GROUP BY pda_imei, car_key
+            ) t
+     ) t1
+INNER JOIN xbenkov1.service_log ON t1.car_key = xbenkov1.service_log.car_key
+                                AND xbenkov1.service_log.time >= t1.min AND xbenkov1.service_log.time <= lead
+WHERE app_run_time <= 0.17
 GROUP BY pda_imei;
 ```
 
