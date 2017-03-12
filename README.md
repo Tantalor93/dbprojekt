@@ -147,8 +147,6 @@ GROUP BY program_ver;
 ========================================================
 **Ukazka vytvoreni materialized view**:
 
-pro kazdou verzi programu zjistit pocet restartu jeho programu:
-
 ```sql
 CREATE MATERIALIZED VIEW number_of_restarts AS SELECT pda_imei, COUNT(app_run_time)
 FROM public.conn_log
