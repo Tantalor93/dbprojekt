@@ -115,12 +115,20 @@ FROM xbenkov1.conn_log
 GROUP BY car_key;
 ```
 
-**pro kazdy typ zarizeni, zjistit pocet restartu**:
+**pro kazdy typ zarizeni, zjistit pocet restartu aplikace**:
 
 ```sql
 SELECT device, COUNT(app_run_time) 
 FROM xbenkov1.service_log 
 WHERE app_run_time <= 0.17 
+GROUP BY device;
+```
+
+**pro kazdy typ zarizeni, zjistit nejdelsi a prumerny beh zarizeni**:
+
+```sql
+SELECT device, max(pda_run_time), avg(pda_run_time) 
+FROM xbenkov1.service_log 
 GROUP BY device;
 ```
 
