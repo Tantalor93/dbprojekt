@@ -38,6 +38,8 @@ Do té tabulky se dávají pouze inserty, periodicky každých X minut ("furt b�
 psql -h db.fi.muni.cz pgdb xbenkov1
 `
 
+=======================================================
+
 **pro kazdou verzi programu zjistit pocty ruznych zarizeni**:
 
  ```sql
@@ -155,6 +157,19 @@ SELECT device, max(pda_run_time), avg(pda_run_time)
 FROM service_log 
 GROUP BY device;
 ```
+
+**kolik bylo vytvoreno spojeni dle roku, mesice a dne**:
+
+```sql
+SELECT DATE_PART('YEAR',time) as year,
+       DATE_PART('MONTH',time) as month,
+       DATE_PART('DAY',time) as day,
+       count(*) as number_of_connections
+FROM conn_log 
+GROUP BY ROLLUP (DATE_PART('YEAR', time), DATE_PART('MONTH', time), DATE_PART('DAY', time));
+```
+
+=======================================================================
 
 **zjisteni bezicich dotazu**:
 
