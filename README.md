@@ -123,6 +123,31 @@ WHERE app_run_time <= 0.17
 GROUP BY device;
 ```
 
+query, ktery zahrne i pocet restartu pro vsechny zarizeni (OLAP varianta)
+
+```sql
+SELECT coalesce(t.device,'all') AS device, COUNT(app_run_time) 
+FROM (
+      SELECT coalesce(device,'N/A') AS device, app_run_time 
+      FROM service_log
+      ) t 
+WHERE app_run_time <= 0.17 
+GROUP BY rollup(device);
+```
+
+query, ktery zahrne i pocet restartu pro vsechny zarizeni
+
+```sql
+SELECT coalesce(device,'N/A') AS device, COUNT(app_run_time) 
+FROM service_log 
+WHERE app_run_time <= 0.17 
+GROUP BY device 
+UNION 
+SELECT 'all' as device, COUNT(*) 
+FROM service_log 
+WHERE app_run_time <= 0.17;
+```
+
 **pro kazdy typ zarizeni, zjistit nejdelsi a prumerny beh zarizeni**:
 
 ```sql
