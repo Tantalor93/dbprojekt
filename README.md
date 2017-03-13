@@ -161,10 +161,10 @@ GROUP BY device;
 **kolik bylo vytvoreno spojeni dle roku, mesice a dne**:
 
 ```sql
-SELECT DATE_PART('YEAR',time) as year,
-       DATE_PART('MONTH',time) as month,
-       DATE_PART('DAY',time) as day,
-       count(*) as number_of_connections
+SELECT DATE_PART('YEAR',time) AS year,
+       DATE_PART('MONTH',time) AS month,
+       DATE_PART('DAY',time) AS day,
+       count(*) AS number_of_connections
 FROM conn_log 
 GROUP BY ROLLUP (DATE_PART('YEAR', time), DATE_PART('MONTH', time), DATE_PART('DAY', time));
 ```
