@@ -41,26 +41,25 @@ psql -h db.fi.muni.cz pgdb xbenkov1
 **pro kazdou verzi programu zjistit pocty ruznych zarizeni**:
 
  ```sql
-
- SELECT COUNT(DISTINCT(pda_imei)), program_ver
- FROM xbenkov1.conn_log
- GROUP BY program_ver;
+SELECT program_ver, COUNT(DISTINCT(pda_imei))
+FROM conn_log
+GROUP BY program_ver;
  ```
 
 **pro kazde zarizeni zjistit pocet restartu programu**:
 
 ```sql
-SELECT pda_imei, COUNT(xbenkov1.service_log.app_run_time)
+SELECT pda_imei, COUNT(service_log.app_run_time)
 FROM (
       SELECT pda_imei ,car_key, min, lead(min,1,now()) OVER (partition by car_key ORDER BY min)
       FROM (
             SELECT  pda_imei, car_key, min(time)
-            FROM xbenkov1.conn_log
+            FROM conn_log
             GROUP BY pda_imei, car_key
             ) t
      ) t1
-INNER JOIN xbenkov1.service_log ON t1.car_key = xbenkov1.service_log.car_key
-                                AND xbenkov1.service_log.time >= t1.min AND xbenkov1.service_log.time <= lead
+INNER JOIN service_log ON t1.car_key = service_log.car_key
+                                AND service_log.time >= t1.min AND service_log.time <= lead
 WHERE app_run_time <= 0.17
 GROUP BY pda_imei;
 ```
@@ -68,50 +67,50 @@ GROUP BY pda_imei;
 **pro kazdou verzi programu zjistit pocet restartu jeho programu**:
 
 ```sql
-SELECT program_ver, COUNT(xbenkov1.service_log.app_run_time) 
+SELECT program_ver, COUNT(service_log.app_run_time) 
 FROM (
       SELECT program_ver, car_key, min, lead(min,1,now()) OVER (partition by car_key ORDER BY min) 
       FROM (
             SELECT program_ver, car_key, min(time) 
-            FROM xbenkov1.conn_log 
+            FROM conn_log 
             GROUP BY program_ver, car_key
             ) t
      ) t1 
-INNER JOIN xbenkov1.service_log ON t1.car_key = xbenkov1.service_log.car_key 
-                                AND xbenkov1.service_log.time >= t1.min AND xbenkov1.service_log.time <= lead 
+INNER JOIN service_log ON t1.car_key = service_log.car_key 
+                                AND service_log.time >= t1.min AND service_log.time <= lead 
 WHERE app_run_time <= 0.17 
 GROUP BY program_ver;
 ```
 
 **pro kazdou verzi programu zjistit nejdelší běh zařízení**:
 ```sql
-SELECT program_ver, max(xbenkov1.service_log.pda_run_time)
+SELECT program_ver, max(service_log.pda_run_time)
 FROM (
       SELECT program_ver, car_key, min, lead(min,1,now()) OVER (partition by car_key ORDER BY min)
       FROM (
             SELECT  program_ver, car_key, min(time)
-            FROM xbenkov1.conn_log
+            FROM conn_log
             GROUP BY program_ver, car_key
             ) t
      ) t1
-INNER JOIN xbenkov1.service_log ON t1.car_key = xbenkov1.service_log.car_key
-                                AND xbenkov1.service_log.time >= t1.min AND xbenkov1.service_log.time <= lead
+INNER JOIN service_log ON t1.car_key = service_log.car_key
+                                AND service_log.time >= t1.min AND service_log.time <= lead
 GROUP BY program_ver;
 ```
 
  **pro kazde zarizeni zjistit, kdy bylo uvedeno do provozu**:
 
 ```sql
-SELECT pda_imei, min(xbenkov1.conn_log.time)
-FROM xbenkov1.conn_log
+SELECT pda_imei, min(time)
+FROM conn_log
 GROUP BY pda_imei;
 ```
 
 **pro kazde auto, zjistit pocet ruznych zarizeni**:
 
 ```sql
-SELECT count(distinct(pda_imei)), car_key 
-FROM xbenkov1.conn_log 
+SELECT car_key, count(distinct(pda_imei))
+FROM conn_log 
 GROUP BY car_key;
 ```
 
@@ -119,7 +118,7 @@ GROUP BY car_key;
 
 ```sql
 SELECT device, COUNT(app_run_time) 
-FROM xbenkov1.service_log 
+FROM service_log 
 WHERE app_run_time <= 0.17 
 GROUP BY device;
 ```
@@ -128,7 +127,7 @@ GROUP BY device;
 
 ```sql
 SELECT device, max(pda_run_time), avg(pda_run_time) 
-FROM xbenkov1.service_log 
+FROM service_log 
 GROUP BY device;
 ```
 
