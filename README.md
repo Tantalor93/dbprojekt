@@ -156,6 +156,7 @@ GROUP BY device;
 ```
 
 **kolik bylo vytvoreno spojeni dle roku, mesice a dne**:
+
 OLAP verze
 
 ```sql
