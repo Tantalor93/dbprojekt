@@ -169,6 +169,20 @@ FROM conn_log
 GROUP BY ROLLUP (DATE_PART('YEAR', time), DATE_PART('MONTH', time), DATE_PART('DAY', time));
 ```
 
+**kolik unikatnich zarizeni vytvorilo spojeni dle roku, mesice a dne**:
+
+```sql
+SELECT DATE_PART('YEAR',time) AS year,
+       DATE_PART('MONTH',time) AS month,
+       DATE_PART('DAY',time) AS day,
+       count(distinct(pda_imei)) AS number_of_connections
+FROM (
+      SELECT coalesce(pda_imei,'N/A') as pda_imei, time 
+      FROM conn_log
+      ) t   
+GROUP BY ROLLUP (DATE_PART('YEAR', time), DATE_PART('MONTH', time), DATE_PART('DAY', time));
+```
+
 =======================================================================
 
 **zjisteni bezicich dotazu**:
