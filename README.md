@@ -156,6 +156,7 @@ GROUP BY device;
 ```
 
 **kolik bylo vytvoreno spojeni dle roku, mesice a dne**:
+OLAP verze
 
 ```sql
 SELECT DATE_PART('YEAR',time) AS year,
@@ -164,6 +165,28 @@ SELECT DATE_PART('YEAR',time) AS year,
        count(*) AS number_of_connections
 FROM conn_log 
 GROUP BY ROLLUP (DATE_PART('YEAR', time), DATE_PART('MONTH', time), DATE_PART('DAY', time));
+```
+
+NO OLAP verze
+
+```sql
+SELECT DATE_PART('YEAR', time) AS year,
+       DATE_PART('MONTH', time) AS month,
+       DATE_PART('DAY', time) AS day,
+       count(*) AS number_of_connections
+FROM conn_log 
+GROUP BY DATE_PART('YEAR', time), DATE_PART('MONTH', time), DATE_PART('DAY', time) 
+UNION 
+SELECT null, null, null, count(*) AS number_of_connections 
+FROM conn_log 
+UNION 
+SELECT DATE_PART('YEAR', time), null, null, count(*) 
+FROM conn_log 
+GROUP BY DATE_PART('YEAR', time) 
+UNION 
+SELECT DATE_PART('YEAR', time), DATE_PART('MONTH', time), null, count(*)
+FROM conn_log 
+GROUP BY DATE_PART('YEAR', time), DATE_PART('MONTH', time);
 ```
 
 **kolik unikatnich zarizeni vytvorilo spojeni dle roku, mesice a dne**:
