@@ -26,6 +26,7 @@ Do té tabulky se dávají pouze inserty, periodicky každých X minut ("furt b�
 -- Nevidím tam žádný identifikátor kromě `car_key`, takže se to bude asi muset podle toho (asi nemůžeš mít dvě PDA v jednom autě)
 
 =====================================================
+
 **restore backupu**:
 
 `
