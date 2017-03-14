@@ -1,4 +1,4 @@
-Projekt z db systémů
+#Projekt z db systémů
 ===
 
 • conn_log(log_key, sim_imsi, time, car_key, pda_imei, gsmnet_id, method, program_ver)
@@ -25,8 +25,6 @@ Vzniká zde záznam po každém připojení zařízení
 Do té tabulky se dávají pouze inserty, periodicky každých X minut ("furt běžím, furt běžím...")
 -- Nevidím tam žádný identifikátor kromě `car_key`, takže se to bude asi muset podle toho (asi nemůžeš mít dvě PDA v jednom autě)
 
-=====================================================
-
 **restore backupu**:
 
 `
@@ -38,8 +36,6 @@ Do té tabulky se dávají pouze inserty, periodicky každých X minut ("furt b�
 `
 psql -h db.fi.muni.cz pgdb xbenkov1
 `
-
-=======================================================
 
 **pro kazdou verzi programu zjistit pocty ruznych zarizeni**:
 
@@ -184,8 +180,6 @@ FROM (
 GROUP BY ROLLUP (DATE_PART('YEAR', time), DATE_PART('MONTH', time), DATE_PART('DAY', time));
 ```
 
-=======================================================================
-
 **zjisteni bezicich dotazu**:
 
 ```sql
@@ -215,7 +209,6 @@ FROM xbenkov1.conn_log
 GROUP BY program_ver;
 ```
 
-========================================================
 **Ukazka vytvoreni materialized view**:
 
 ```sql
