@@ -180,6 +180,13 @@ FROM (
 GROUP BY ROLLUP (DATE_PART('YEAR', time), DATE_PART('MONTH', time), DATE_PART('DAY', time));
 ```
 
+**pro kazdou verzi zjisti kolik spojeni bylo vytvoreno danym protokolem a kolik bylo celkem spojeni a kolik spojeni bylo pro dany protokol nehlede na verzi**:
+
+```sql
+SELECT program_ver,method,count(*) 
+FROM conn_log 
+GROUP BY GROUPING SETS((program_ver,method),(method),());
+```
 **zjisteni bezicich dotazu**:
 
 ```sql
