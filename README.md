@@ -128,7 +128,7 @@ GROUP BY device;
 query, ktery zahrne i pocet restartu pro vsechny zarizeni (OLAP varianta)
 
 ```sql
-SELECT coalesce(t.device,'all') AS device, COUNT(app_run_time) 
+SELECT t.device, COUNT(app_run_time) 
 FROM (
       SELECT coalesce(device,'N/A') AS device, app_run_time 
       FROM service_log
@@ -145,7 +145,7 @@ FROM service_log
 WHERE app_run_time <= 0.17 
 GROUP BY device 
 UNION 
-SELECT 'all' as device, COUNT(*) 
+SELECT null as device, COUNT(*) 
 FROM service_log 
 WHERE app_run_time <= 0.17;
 ```
