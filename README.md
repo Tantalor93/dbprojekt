@@ -192,6 +192,8 @@ GROUP BY DATE_PART('YEAR', time), DATE_PART('MONTH', time);
 
 **kolik unikatnich zarizeni vytvorilo spojeni dle roku, mesice a dne**:
 
+OLAP verze
+
 ```sql
 SELECT DATE_PART('YEAR',time) AS year,
        DATE_PART('MONTH',time) AS month,
@@ -202,6 +204,39 @@ FROM (
       FROM conn_log
       ) t   
 GROUP BY ROLLUP (DATE_PART('YEAR', time), DATE_PART('MONTH', time), DATE_PART('DAY', time));
+```
+
+Normal verze
+
+```sql
+SELECT DATE_PART('YEAR',time) AS year,
+       DATE_PART('MONTH',time) AS month,
+       DATE_PART('DAY',time) AS day,
+       count(distinct(pda_imei)) AS number_of_connections
+FROM (
+      SELECT coalesce(pda_imei,'N/A') as pda_imei, time 
+      FROM conn_log
+      ) t   
+GROUP BY DATE_PART('YEAR', time), DATE_PART('MONTH', time), DATE_PART('DAY', time) 
+UNION 
+SELECT DATE_PART('YEAR',time),null,null,count(distinct(pda_imei)) 
+FROM (
+      SELECT coalesce(pda_imei,'N/A') as pda_imei,time 
+      FROM conn_log
+      ) t 
+GROUP BY DATE_PART('YEAR',time) 
+UNION 
+SELECT DATE_PART('YEAR',time),DATE_PART('MONTH',time),null,count(distinct(pda_imei)) 
+FROM (
+      SELECT coalesce(pda_imei,'N/A') as pda_imei, time 
+      FROM conn_log
+      ) t 
+GROUP BY DATE_PART('YEAR',time),DATE_PART('MONTH',time) 
+UNION 
+SELECT null, null, null, count(distinct(pda_imei)) 
+FROM (
+      SELECT coalesce(pda_imei,'N/A') as pda_imei,time FROM conn_log
+      ) t;
 ```
 
 **pro kazdou verzi zjisti kolik spojeni bylo vytvoreno danym protokolem a kolik bylo celkem spojeni a kolik spojeni bylo pro dany protokol nehlede na verzi**:
