@@ -206,11 +206,27 @@ GROUP BY ROLLUP (DATE_PART('YEAR', time), DATE_PART('MONTH', time), DATE_PART('D
 
 **pro kazdou verzi zjisti kolik spojeni bylo vytvoreno danym protokolem a kolik bylo celkem spojeni a kolik spojeni bylo pro dany protokol nehlede na verzi**:
 
+OLAP verze
 ```sql
 SELECT program_ver,method,count(*) 
 FROM conn_log 
 GROUP BY GROUPING SETS((program_ver,method),(method),());
 ```
+
+normal verze
+
+```sql
+SELECT program_ver,method,count(*) 
+FROM conn_log 
+GROUP BY program_ver,method 
+UNION 
+SELECT null, method, count(*) 
+FROM conn_log 
+GROUP BY method 
+UNION SELECT null, null, count(*) 
+FROM conn_log;
+```
+
 **zjisteni bezicich dotazu**:
 
 ```sql
