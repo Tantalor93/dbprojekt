@@ -235,7 +235,8 @@ GROUP BY DATE_PART('YEAR',time),DATE_PART('MONTH',time)
 UNION 
 SELECT null, null, null, count(distinct(pda_imei)) 
 FROM (
-      SELECT coalesce(pda_imei,'N/A') as pda_imei,time FROM conn_log
+      SELECT coalesce(pda_imei,'N/A') as pda_imei,time 
+      FROM conn_log
       ) t;
 ```
 
