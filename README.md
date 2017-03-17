@@ -48,52 +48,40 @@ GROUP BY program_ver;
 **pro kazde zarizeni zjistit pocet restartu programu**:
 
 ```sql
-SELECT pda_imei, COUNT(service_log.app_run_time)
+SELECT pda_imei, count(service_log.app_run_time) 
 FROM (
-      SELECT pda_imei ,car_key, min, lead(min,1,now()) OVER (partition by car_key ORDER BY min)
-      FROM (
-            SELECT  pda_imei, car_key, min(time)
-            FROM conn_log
-            GROUP BY pda_imei, car_key
-            ) t
-     ) t1
-INNER JOIN service_log ON t1.car_key = service_log.car_key
-                                AND service_log.time >= t1.min AND service_log.time <= lead
-WHERE app_run_time <= 0.17
+      SELECT pda_imei,
+             car_key,
+             time as session_begin,
+             lead(time,1,now()) OVER (Partition by car_key ORDER BY time) AS session_end 
+      FROM conn_log
+      ) t1 
+      INNER JOIN 
+      service_log 
+      ON t1.car_key = service_log.car_key 
+         AND service_log.time >= session_begin 
+         AND service_log.time <= session_end 
+WHERE app_run_time <= 0.17 
 GROUP BY pda_imei;
 ```
 
 **pro kazdou verzi programu zjistit pocet restartu jeho programu**:
 
 ```sql
-SELECT program_ver, COUNT(service_log.app_run_time) 
+SELECT program_ver, count(service_log.app_run_time) 
 FROM (
-      SELECT program_ver, car_key, min, lead(min,1,now()) OVER (partition by car_key ORDER BY min) 
-      FROM (
-            SELECT program_ver, car_key, min(time) 
-            FROM conn_log 
-            GROUP BY program_ver, car_key
-            ) t
-     ) t1 
-INNER JOIN service_log ON t1.car_key = service_log.car_key 
-                                AND service_log.time >= t1.min AND service_log.time <= lead 
+      SELECT program_ver,                                                                          
+             car_key,
+             time as session_begin,
+             lead(time,1,now()) OVER (Partition by car_key ORDER BY time) AS session_end 
+      FROM conn_log
+      ) t1 
+      INNER JOIN 
+      service_log                                          
+      ON t1.car_key = service_log.car_key 
+         AND service_log.time >= session_begin 
+         AND service_log.time <= session_end 
 WHERE app_run_time <= 0.17 
-GROUP BY program_ver;
-```
-
-**pro kazdou verzi programu zjistit nejdelší běh zařízení**:
-```sql
-SELECT program_ver, max(service_log.pda_run_time)
-FROM (
-      SELECT program_ver, car_key, min, lead(min,1,now()) OVER (partition by car_key ORDER BY min)
-      FROM (
-            SELECT  program_ver, car_key, min(time)
-            FROM conn_log
-            GROUP BY program_ver, car_key
-            ) t
-     ) t1
-INNER JOIN service_log ON t1.car_key = service_log.car_key
-                                AND service_log.time >= t1.min AND service_log.time <= lead
 GROUP BY program_ver;
 ```
 
