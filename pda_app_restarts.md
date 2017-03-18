@@ -39,6 +39,14 @@ ORDER BY count DESC
 LIMIT 10;
 ```
 
+### Kolikrat se celkem kazde zarizeni restartovalo
+
+```sql
+SELECT pda_imei, count 
+FROM agg_pda_app_restarts 
+WHERE year is null AND month is null AND day is null;
+```
+
 ## normal varianta
 
 ### tabulka restartu zarizeni (vsechny restarty vsech zarizeni, nic neni agregovano)
@@ -70,4 +78,12 @@ WHERE DATE_PART('YEAR',pda_app_restarts.time) = '2017' AND DATE_PART('MONTH',pda
 GROUP BY pda_imei 
 ORDER BY count DESC 
 LIMIT 10;
+```
+
+### Kolikrat se celkem kazde zarizeni restartovalo
+
+```sql
+SELECT pda_imei, count(pda_app_restarts.app_run_time) 
+FROM pda_app_restarts
+GROUP BY pda_imei;
 ```
