@@ -1,4 +1,8 @@
-# OLAP varianta
+## Motivace 
+
+pro kazdou verzi programu zjistit pocet restartu jeho programu
+
+## OLAP varianta
 
 ### Pivot table pro restarty programu
 
@@ -34,7 +38,7 @@ WHERE year='2017' AND month='1' AND day is null
 ORDER BY count ASC;
 ```
 
-# normal varianta
+## normal varianta
 
 ### tabulka restartu verzi
 
