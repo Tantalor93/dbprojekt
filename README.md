@@ -1,4 +1,4 @@
-#Projekt z db systémů
+# Projekt z db systémů
 ===
 
 • conn_log(log_key, sim_imsi, time, car_key, pda_imei, gsmnet_id, method, program_ver)
