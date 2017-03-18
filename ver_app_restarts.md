@@ -38,6 +38,14 @@ WHERE year='2017' AND month='1' AND day is null
 ORDER BY count ASC;
 ```
 
+### Kolikrat se celkem kazda verze restartovala
+
+```sql
+SELECT program_ver, count 
+FROM agg_ver_app_restarts 
+WHERE year is null AND month is null AND day is null;
+```
+
 ## normal varianta
 
 ### tabulka restartu verzi
@@ -68,4 +76,12 @@ FROM ver_app_restarts
 WHERE DATE_PART('YEAR',ver_app_restarts.time) = '2017' AND DATE_PART('MONTH',ver_app_restarts.time)='1' 
 GROUP BY program_ver 
 ORDER BY count ASC;
+```
+
+### Kolikrat se celkem kazda verze restartovala
+
+```sql
+SELECT program_ver, count(ver_app_restarts.app_run_time) 
+FROM ver_app_restarts
+GROUP BY program_ver;
 ```
