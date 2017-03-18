@@ -1,5 +1,5 @@
 # OLAP varianta
-## Pivot table pro restarty programu
+### Pivot table pro restarty programu
 
 ```sql
 CREATE MATERIALIZED VIEW agg_pda_app_restarts AS 
@@ -25,7 +25,7 @@ GROUP BY rollup(DATE_PART('YEAR',service_log.time),DATE_PART('MONTH',service_log
          pda_imei;
 ```
 
-## TOP 10 zarizeni, ktere se restartovali v lednu 2017
+### TOP 10 zarizeni, ktere se restartovali v lednu 2017
 
 ```sql
 SELECT pda_imei, count 
@@ -37,7 +37,7 @@ LIMIT 10;
 
 # normal varianta
 
-## tabulka restartu zarizeni (vsechny restarty vsech zarizeni, nic neni agregovano)
+### tabulka restartu zarizeni (vsechny restarty vsech zarizeni, nic neni agregovano)
 
 ```sql
 CREATE MATERIALIZED VIEW pda_app_restarts AS  
@@ -57,7 +57,7 @@ FROM (
 WHERE app_run_time <= 0.17;
 ```
 
-## TOP 10 zarizeni, ktere se restartovali v lednu 2017
+### TOP 10 zarizeni, ktere se restartovali v lednu 2017
 
 ```sql
 SELECT pda_imei, count(pda_app_restarts.app_run_time) 
