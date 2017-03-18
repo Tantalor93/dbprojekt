@@ -3,10 +3,10 @@
 
 ```sql
 CREATE MATERIALIZED VIEW agg_pda_app_restarts AS 
-SELECT DATE_PART('YEAR',service_log.time) as year,
+SELECT pda_imei,
+       DATE_PART('YEAR',service_log.time) as year,
        DATE_PART('MONTH',service_log.time) as month,
        DATE_PART('DAY',service_log.time) as day,
-       pda_imei,
        count(service_log.app_run_time) 
 FROM (
       SELECT pda_imei,
