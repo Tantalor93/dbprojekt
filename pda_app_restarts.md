@@ -1,4 +1,8 @@
-# OLAP varianta
+## Motivace
+
+pro kazde zarizeni zjistit pocet restartu programu
+
+## OLAP varianta
 ### Pivot table pro restarty programu
 
 ```sql
@@ -35,7 +39,7 @@ ORDER BY count DESC
 LIMIT 10;
 ```
 
-# normal varianta
+## normal varianta
 
 ### tabulka restartu zarizeni (vsechny restarty vsech zarizeni, nic neni agregovano)
 
