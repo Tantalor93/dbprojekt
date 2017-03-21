@@ -29,7 +29,7 @@ WHERE app_run_time <= 0.17
 GROUP BY rollup(DATE_PART('YEAR',service_log.time), DATE_PART('MONTH',service_log.time), DATE_PART('DAY',service_log.time)),program_ver;
 ```
 
-### Serad verze programu dle toho jak casto se restartovali (od nejmin restartu po nejvic)
+### Serad verze programu dle toho jak casto se restartovali v lednu 2017(od nejmin restartu po nejvic)
 
 ```sql
 SELECT program_ver, count 
@@ -68,7 +68,7 @@ FROM (
 WHERE app_run_time <= 0.17;
 ```
 
-### Serad verze programu dle toho jak casto se restartovali (od nejmin restartu po nejvic)
+### Serad verze programu dle toho jak casto se restartovali v lednu 2017 (od nejmin restartu po nejvic)
 
 ```sql
 SELECT program_ver, count(ver_app_restarts.app_run_time) 
