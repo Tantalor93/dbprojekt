@@ -53,3 +53,15 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms
 3 | 0.061 | 3.561 | |
 4 | 0.062 | 3.554 | |
 5 | 0.062 | 3.528 | |
+
+# Prumerne vysledky OLAP
+Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
+Pivot table pro restarty programu | 0.325 ms | 16.442 s |  | 
+TOP 10 zarizeni, ktere se restartovali v lednu 2017 | 0.166 ms | 1.469 ms | | 
+Kolikrat se celkem kazde zarizeni restartovalo | 0.053 ms | 1.054 ms | |
+
+# Prumerne vysledky Normal
+Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
+tabulka restartu zarizeni (vsechny restarty vsech zarizeni, nic neni agregovano) | 0.392 ms | 16.060 s | |
+TOP 10 zarizeni, ktere se restartovali v lednu 2017 | 0.159 ms | 38.525 ms | | 
+Kolikrat se celkem kazde zarizeni restartovalo | 0.064 ms | 3.586 ms | | 
