@@ -13,7 +13,7 @@ SELECT pda_imei,
        DATE_PART('YEAR',service_log.time) as year,
        DATE_PART('MONTH',service_log.time) as month,
        DATE_PART('DAY',service_log.time) as day,
-       count(*) 
+       count(*) as restart_count
 FROM (
       SELECT pda_imei,
              car_key,
@@ -34,17 +34,17 @@ GROUP BY rollup(DATE_PART('YEAR',service_log.time),DATE_PART('MONTH',service_log
 ### TOP 10 zarizeni, ktere se restartovali v lednu 2017
 
 ```sql
-SELECT pda_imei, count 
+SELECT pda_imei, restart_count 
 FROM agg_pda_app_restarts 
 WHERE year='2017' AND month='1' AND day is null 
-ORDER BY count DESC 
+ORDER BY restart_count DESC 
 LIMIT 10;
 ```
 
 ### Kolikrat se celkem kazde zarizeni restartovalo
 
 ```sql
-SELECT pda_imei, count 
+SELECT pda_imei, restart_count 
 FROM agg_pda_app_restarts 
 WHERE year is null AND month is null AND day is null;
 ```
@@ -74,18 +74,18 @@ WHERE app_run_time <= 0.17;
 ### TOP 10 zarizeni, ktere se restartovali v lednu 2017
 
 ```sql
-SELECT pda_imei, count(*) 
+SELECT pda_imei, count(*) as restart_count
 FROM pda_app_restarts 
 WHERE DATE_PART('YEAR',pda_app_restarts.time) = '2017' AND DATE_PART('MONTH',pda_app_restarts.time)='1' 
 GROUP BY pda_imei 
-ORDER BY count DESC 
+ORDER BY restart_count DESC 
 LIMIT 10;
 ```
 
 ### Kolikrat se celkem kazde zarizeni restartovalo
 
 ```sql
-SELECT pda_imei, count(*) 
+SELECT pda_imei, count(*) as restart_count
 FROM pda_app_restarts
 GROUP BY pda_imei;
 ```
@@ -115,18 +115,18 @@ WHERE app_run_time <= 0.17;
 ### TOP 10 zarizeni, ktere se restartovali v lednu 2017
 
 ```sql
-SELECT pda_imei, count(*) 
+SELECT pda_imei, count(*) as restart_count
 FROM view_pda_app_restarts 
 WHERE DATE_PART('YEAR',view_pda_app_restarts.time) = '2017' AND DATE_PART('MONTH',view_pda_app_restarts.time)='1' 
 GROUP BY pda_imei 
-ORDER BY count DESC 
+ORDER BY restart_count DESC 
 LIMIT 10;
 ```
 
 ### Kolikrat se celkem kazde zarizeni restartovalo
 
 ```sql
-SELECT pda_imei, count(*) 
+SELECT pda_imei, count(*) as restart_count
 FROM view_pda_app_restarts
 GROUP BY pda_imei;
 ```
