@@ -6,7 +6,7 @@ pro kazdou verzi programu zjistit pocet restartu jeho programu
 
 ### Pivot table pro restarty programu
 
-(*dimenze*: program_ver, year, month, day) (*measure*: count)
+(*dimenze*: program_ver, year, month, day) (*measure*: pocet restartu)
 
 ```sql
 CREATE MATERIALIZED VIEW agg_ver_app_restarts AS 
