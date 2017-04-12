@@ -5,6 +5,8 @@ pro kazdou verzi programu zjistit pocty ruznych zarizeni
 
 ### Pivot table
 
+(*dimenze*: program_ver, year, month, day) (*measure*: pocet ruznych zarizeni)
+
 ```sql
 CREATE MATERIALIZED VIEW agg_ver_pda AS 
 SELECT program_ver,
