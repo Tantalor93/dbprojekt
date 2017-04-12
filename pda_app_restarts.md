@@ -3,7 +3,7 @@
 pro kazde zarizeni zjistit pocet restartu programu
 
 ## OLAP varianta
-### Pivot table pro restarty programu
+### Pivot table pro restarty programu (dimenze: pda_imei, year, month, day) (measure: count)
 
 ```sql
 CREATE MATERIALIZED VIEW agg_pda_app_restarts AS 
@@ -11,7 +11,7 @@ SELECT pda_imei,
        DATE_PART('YEAR',service_log.time) as year,
        DATE_PART('MONTH',service_log.time) as month,
        DATE_PART('DAY',service_log.time) as day,
-       count(service_log.app_run_time) 
+       count(*) 
 FROM (
       SELECT pda_imei,
              car_key,
@@ -72,7 +72,7 @@ WHERE app_run_time <= 0.17;
 ### TOP 10 zarizeni, ktere se restartovali v lednu 2017
 
 ```sql
-SELECT pda_imei, count(pda_app_restarts.app_run_time) 
+SELECT pda_imei, count(*) 
 FROM pda_app_restarts 
 WHERE DATE_PART('YEAR',pda_app_restarts.time) = '2017' AND DATE_PART('MONTH',pda_app_restarts.time)='1' 
 GROUP BY pda_imei 
@@ -83,7 +83,7 @@ LIMIT 10;
 ### Kolikrat se celkem kazde zarizeni restartovalo
 
 ```sql
-SELECT pda_imei, count(pda_app_restarts.app_run_time) 
+SELECT pda_imei, count(*) 
 FROM pda_app_restarts
 GROUP BY pda_imei;
 ```
@@ -113,7 +113,7 @@ WHERE app_run_time <= 0.17;
 ### TOP 10 zarizeni, ktere se restartovali v lednu 2017
 
 ```sql
-SELECT pda_imei, count(view_pda_app_restarts.app_run_time) 
+SELECT pda_imei, count(*) 
 FROM view_pda_app_restarts 
 WHERE DATE_PART('YEAR',view_pda_app_restarts.time) = '2017' AND DATE_PART('MONTH',view_pda_app_restarts.time)='1' 
 GROUP BY pda_imei 
@@ -124,7 +124,7 @@ LIMIT 10;
 ### Kolikrat se celkem kazde zarizeni restartovalo
 
 ```sql
-SELECT pda_imei, count(view_pda_app_restarts.app_run_time) 
+SELECT pda_imei, count(*) 
 FROM view_pda_app_restarts
 GROUP BY pda_imei;
 ```
