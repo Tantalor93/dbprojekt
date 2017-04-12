@@ -5,6 +5,8 @@ pro kazdou verzi programu zjistit pocet spojeni
 
 ### Pivot table
 
+(*dimenze*: program_ver, year, month, day) (*measure*: pocet restartu)
+
 ```sql
 CREATE MATERIALIZED VIEW ver_conns AS 
 SELECT program_ver,
@@ -19,7 +21,7 @@ GROUP BY program_ver, rollup(DATE_PART('YEAR',time),DATE_PART('MONTH',time),DATE
 ### Pocet spojeni celkem pro kazdou verzi
 
 ```sql
-SELECT program_ver, COUNT(*)
+SELECT program_ver, count
 FROM ver_conns 
 WHERE year is null AND month is null AND day is null;
 ```
