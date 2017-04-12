@@ -3,7 +3,9 @@
 pro kazde zarizeni zjistit pocet restartu programu
 
 ## OLAP varianta
-### Pivot table pro restarty programu (dimenze: pda_imei, year, month, day) (measure: count)
+### Pivot table pro restarty programu
+
+(dimenze: pda_imei, year, month, day) (measure: count)
 
 ```sql
 CREATE MATERIALIZED VIEW agg_pda_app_restarts AS 
