@@ -4,7 +4,7 @@ pro kazde zarizeni zjistit kolik hodin bylo pouzivano
 ## OLAP varianta
 ### Pivot table
 
-(*dimenze*: pda_imei, year, month, day) (*measure*: suma pres pda_run_time)
+(*dimenze*: pda_imei, year, month, day) (*measure*: doba behu v hodinach)
 
 ```sql
 CREATE MATERIALIZED VIEW pda_run_time AS 
