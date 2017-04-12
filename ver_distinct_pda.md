@@ -13,7 +13,7 @@ SELECT program_ver,
        DATE_PART('YEAR',time) as year,
        DATE_PART('MONTH',time) as month,
        DATE_PART('DAY',time) as day,
-       COUNT(DISTINCT(pda_imei))
+       COUNT(DISTINCT(pda_imei)) as pda_count
 FROM conn_log
 GROUP BY program_ver, rollup(DATE_PART('YEAR',time),DATE_PART('MONTH',time),DATE_PART('DAY',time));
 ```
@@ -21,7 +21,7 @@ GROUP BY program_ver, rollup(DATE_PART('YEAR',time),DATE_PART('MONTH',time),DATE
 ### Celkovy pocet ruznych zarizeni pro kazdou verzi
 
 ```sql
-SELECT program_ver, count 
+SELECT program_ver, pda_count 
 FROM agg_ver_pda 
 WHERE year is null AND month is null AND day is null;
 ```
@@ -31,7 +31,7 @@ WHERE year is null AND month is null AND day is null;
 ### Celkovy pocet ruznych zarizeni pro kazdou verzi
 
 ```sql
-SELECT program_ver, COUNT(DISTINCT(pda_imei))                                                   
+SELECT program_ver, COUNT(DISTINCT(pda_imei)) as pda_count                                                   
 FROM conn_log
 GROUP BY program_ver;
 ```
