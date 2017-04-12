@@ -12,7 +12,7 @@ SELECT pda_imei,
        DATE_PART('YEAR',t2.time) as year,
        DATE_PART('MONTH',t2.time) as month,
        DATE_PART('DAY',t2.time) as day,
-       sum(t2.pda_run_time) 
+       sum(t2.pda_run_time) as runtime
 FROM (
       SELECT pda_imei,
              car_key,
@@ -40,7 +40,7 @@ GROUP BY pda_imei, rollup(DATE_PART('YEAR',t2.time),DATE_PART('MONTH',t2.time),D
 ### pro kazde zarizeni zjistit kolik hodin bylo pouzivano
 
 ```sql
-SELECT pda_imei, sum  
+SELECT pda_imei, runtime  
 FROM pda_run_time 
 WHERE year is null AND month is null AND day is null;
 ```
@@ -51,7 +51,7 @@ WHERE year is null AND month is null AND day is null;
 
 ```sql
 SELECT pda_imei, 
-       sum(t2.pda_run_time) 
+       sum(t2.pda_run_time) as runtime
 FROM (
       SELECT pda_imei,
              car_key,
