@@ -6,13 +6,15 @@ pro kazdou verzi programu zjistit pocet restartu jeho programu
 
 ### Pivot table pro restarty programu
 
+(*dimenze*: program_ver, year, month, day) (*measure*: count)
+
 ```sql
 CREATE MATERIALIZED VIEW agg_ver_app_restarts AS 
 SELECT program_ver, 
        DATE_PART('YEAR',service_log.time) as year,
        DATE_PART('MONTH',service_log.time) as month,
        DATE_PART('DAY', service_log.time) as day,
-       count(service_log.app_run_time) 
+       count(*) 
 FROM (
       SELECT program_ver,                                                                          
              car_key,
@@ -71,7 +73,7 @@ WHERE app_run_time <= 0.17;
 ### Serad verze programu dle toho jak casto se restartovali v lednu 2017 (od nejmin restartu po nejvic)
 
 ```sql
-SELECT program_ver, count(ver_app_restarts.app_run_time) 
+SELECT program_ver, count(*) 
 FROM ver_app_restarts 
 WHERE DATE_PART('YEAR',ver_app_restarts.time) = '2017' AND DATE_PART('MONTH',ver_app_restarts.time)='1' 
 GROUP BY program_ver 
@@ -81,7 +83,7 @@ ORDER BY count ASC;
 ### Kolikrat se celkem kazda verze restartovala
 
 ```sql
-SELECT program_ver, count(ver_app_restarts.app_run_time) 
+SELECT program_ver, count(*) 
 FROM ver_app_restarts
 GROUP BY program_ver;
 ```
@@ -111,7 +113,7 @@ WHERE app_run_time <= 0.17;
 ### Serad verze programu dle toho jak casto se restartovali v lednu 2017 (od nejmin restartu po nejvic)
 
 ```sql
-SELECT program_ver, count(view_ver_app_restarts.app_run_time) 
+SELECT program_ver, count(*) 
 FROM view_ver_app_restarts 
 WHERE DATE_PART('YEAR',view_ver_app_restarts.time) = '2017' AND DATE_PART('MONTH',view_ver_app_restarts.time)='1' 
 GROUP BY program_ver 
@@ -121,7 +123,7 @@ ORDER BY count ASC;
 ### Kolikrat se celkem kazda verze restartovala
 
 ```sql
-SELECT program_ver, count(view_ver_app_restarts.app_run_time) 
+SELECT program_ver, count(*) 
 FROM view_ver_app_restarts
 GROUP BY program_ver;
 ```
