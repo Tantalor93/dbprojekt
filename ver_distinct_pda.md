@@ -26,6 +26,14 @@ FROM agg_ver_pda
 WHERE year is null AND month is null AND day is null;
 ```
 
+### Pocet ruznych zarizeni v lednu 2017
+
+```sql
+SELECT program_ver, pda_count 
+FROM agg_ver_pda 
+WHERE year=2017 AND month=1 AND day is null;
+```
+
 ## Normal verze
 
 ### Celkovy pocet ruznych zarizeni pro kazdou verzi
@@ -33,5 +41,14 @@ WHERE year is null AND month is null AND day is null;
 ```sql
 SELECT program_ver, COUNT(DISTINCT(pda_imei)) as pda_count                                                   
 FROM conn_log
+GROUP BY program_ver;
+```
+
+### Pocet ruznych zarizeni v lednu 2017
+
+```sql
+SELECT program_ver, COUNT(DISTINCT(pda_imei)) as pda_count                                                   
+FROM conn_log 
+WHERE DATE_PART('YEAR',time)=2017 AND DATE_PART('MONTH',time)=1
 GROUP BY program_ver;
 ```
