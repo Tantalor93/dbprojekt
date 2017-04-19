@@ -1,5 +1,6 @@
 # OLAP
 **Pivot table pro restarty programu**
+
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (s) | PC-2 Planning time (ms) | PC-2 Execution time (s) |
 --- | ------------------ | ------------------ | --- | ---
 1 | 0.246 | 16.014 | |
@@ -9,6 +10,7 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (s) | PC-2 Planning time (ms)
 5 | 0.309 | 16.550 | |
 
 **TOP 10 zarizeni, ktere se restartovali v lednu 2017** 
+
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
 --- | ------------------ | ------------------ | --- | ---
 1 | 0.479 | 1.573 | |
@@ -18,16 +20,18 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms
 5 | 0.095 | 1.387 | |
 
 **Kolikrat se celkem kazde zarizeni restartovalo**
+
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
 --- | ------------------ | ------------------ | --- | ---
 1 | 0.047 | 1.042 | |
 2 | 0.054 | 1.030 | |
-3 | 0.052 | 1.033 |
+3 | 0.052 | 1.033 | |
 4 | 0.058 | 1.131 | |
 5 | 0.056 | 1.032 | |
 
 # Normal
 **tabulka restartu zarizeni (vsechny restarty vsech zarizeni, nic neni agregovano)**
+
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (s) | PC-2 Planning time (ms) | PC-2 Execution time (s) |
 --- | ------------------ | ------------------ | --- | ---
 1 | 0.899 | 17.417 | |
@@ -37,6 +41,7 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (s) | PC-2 Planning time (ms)
 5 | 0.292 | 15.766 | |
 
 **TOP 10 zarizeni, ktere se restartovali v lednu 2017**
+
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
 --- | ------------------ | ------------------ | --- | ---
 1 | 0.445 | 38.945 | |
@@ -46,6 +51,7 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms
 5 | 0.091 | 38.652 | |
 
 **Kolikrat se celkem kazde zarizeni restartovalo**
+
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
 --- | ------------------ | ------------------ | --- | ---
 1 | 0.070 | 3.611 | |
