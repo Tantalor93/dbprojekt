@@ -52,7 +52,7 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms
 
 **Kolikrat se celkem kazda verze restartovala**
 
-Nr | PC-1 Planning time (ms) | PC-1 Execution time (,s) | PC-2 Planning time (ms) | PC-2 Execution time (,s) |
+Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (,s) |
 --- | ------------------ | ------------------ | --- | ---
 1 | 0.071 | 3.197 | |
 2 | 0.061 | 3.052 | |
@@ -88,21 +88,21 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (s) | PC-2 Planning time (ms)
 
 Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
 --- | --- | --- | --- | ---
-Pivot table pro restarty programu |  | |  | 
-Serad verze programu dle toho jak casto se restartovali v lednu 2017(od nejmin restartu po nejvic)* |  | |  | 
-Kolikrat se celkem kazda verze restartovala |  | |  | 
+Pivot table pro restarty programu | 0.274 ms | 15.123 s |  | 
+Serad verze programu dle toho jak casto se restartovali v lednu 2017(od nejmin restartu po nejvic) | 0.232 ms | 0.093 ms |  | 
+Kolikrat se celkem kazda verze restartovala | 0.066 ms | 0.06 ms |  | 
 
 # Prumerne vysledky Normal s materialized view
 
 Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
 --- | --- | --- | --- | ---
-tabulka restartu verzi |  | |  | 
-Serad verze programu dle toho jak casto se restartovali v lednu 2017(od nejmin restartu po nejvic)* |  | |  | 
-Kolikrat se celkem kazda verze restartovala |  | |  | 
+tabulka restartu verzi | 0.267 ms | 15.348 s |  | 
+Serad verze programu dle toho jak casto se restartovali v lednu 2017(od nejmin restartu po nejvic) | 0.13 ms | 11.85 ms |  | 
+Kolikrat se celkem kazda verze restartovala | 0.066 ms  | 3 ms |  | 
  
  # Prumerne vysledky Normal s beznym view
 
 Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
 --- | --- | --- | --- | ---
-Serad verze programu dle toho jak casto se restartovali v lednu 2017(od nejmin restartu po nejvic)* |  | |  | 
-Kolikrat se celkem kazda verze restartovala |  | |  | 
+Serad verze programu dle toho jak casto se restartovali v lednu 2017(od nejmin restartu po nejvic) | 0.26 ms | 14.319 s |  | 
+Kolikrat se celkem kazda verze restartovala | 0.247 ms | 14.713 s |  | 
