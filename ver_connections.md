@@ -26,6 +26,14 @@ FROM ver_conns
 WHERE year is null AND month is null AND day is null;
 ```
 
+### Pocet spojeni v lednu 2017
+
+```sql
+ SELECT program_ver, conn_count
+FROM ver_conns 
+WHERE year=2017 AND month=1  AND day is null;
+```
+
 ## Normalni verze
 
 ### Celkovy pocet spojeni pro kazdou verzi
@@ -35,3 +43,13 @@ SELECT program_ver, COUNT(*) as conn_count
 FROM conn_log
 GROUP BY program_ver;
 ```
+
+### Pocet spojeni v lednu 2017
+
+```sql
+SELECT program_ver, COUNT(*) as conn_count                                                   
+FROM conn_log 
+WHERE DATE_PART('YEAR',time)=2017 AND DATE_PART('MONTH',time)=1
+GROUP BY program_ver;
+```
+
