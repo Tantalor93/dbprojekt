@@ -60,7 +60,7 @@ Pivot table pro restarty programu | 0.325 ms | 16442 ms | 0.3842 ms | 28380.1018
 TOP 10 zarizeni, ktere se restartovali v lednu 2017 | 0.166 ms | 1.469 ms | 0.4856 ms | 2.0048 ms |
 Kolikrat se celkem kazde zarizeni restartovalo | 0.053 ms | 1.054 ms | 0.042 ms | 2.4092 ms |
 
-# Prumerne vysledky Normal varianty
+# Prumerne vysledky Normal
 
 Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
 --- | --- | --- | --- | ---
