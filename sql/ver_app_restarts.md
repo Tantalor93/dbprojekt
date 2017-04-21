@@ -50,46 +50,6 @@ WHERE year is null AND month is null AND day is null;
 
 ## normal varianta
 
-### tabulka restartu verzi
-
-```sql
-CREATE MATERIALIZED VIEW ver_app_restarts AS 
-SELECT program_ver, service_log.time, service_log.app_run_time 
-FROM (
-      SELECT program_ver,                                                                          
-             car_key,
-             time as session_begin,
-             lead(time,1,now()) OVER (Partition by car_key ORDER BY time) AS session_end 
-      FROM conn_log
-      ) t1 
-      INNER JOIN 
-      service_log                                          
-      ON t1.car_key = service_log.car_key 
-         AND service_log.time >= session_begin 
-         AND service_log.time <= session_end 
-WHERE app_run_time <= 0.17;
-```
-
-### Serad verze programu dle toho jak casto se restartovali v lednu 2017 (od nejmin restartu po nejvic)
-
-```sql
-SELECT program_ver, count(*) as restart_count
-FROM ver_app_restarts 
-WHERE DATE_PART('YEAR',ver_app_restarts.time) = '2017' AND DATE_PART('MONTH',ver_app_restarts.time)='1' 
-GROUP BY program_ver 
-ORDER BY restart_count ASC;
-```
-
-### Kolikrat se celkem kazda verze restartovala
-
-```sql
-SELECT program_ver, count(*) as restart_count
-FROM ver_app_restarts
-GROUP BY program_ver;
-```
-
-## normal varianta bez materializovanych pohledu
-
 ### view restartu verzi
 
 ```sql
