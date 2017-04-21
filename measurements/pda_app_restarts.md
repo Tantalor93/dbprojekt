@@ -1,33 +1,33 @@
 # OLAP
 **Pivot table pro restarty programu**
 
-Nr | PC-1 Planning time (ms) | PC-1 Execution time (s) | PC-2 Planning time (ms) | PC-2 Execution time (s) |
+Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
 --- | ------------------ | ------------------ | --- | ---
-1 | 0.246 | 16.014 | |
-2 | 0.305 | 15.845 | |
-3 | 0.456 | 16.645 | |
-4 | 0.311 | 17.155 | |
-5 | 0.309 | 16.550 | |
+1 | 0.246 | 16014 | 0.847 | 28270.167 |
+2 | 0.305 | 15845 | 0.346 | 28293.124 |
+3 | 0.456 | 16645 | 0.213 | 31139.352 |
+4 | 0.311 | 17155 | 0.305 | 27388.545 |
+5 | 0.309 | 16550 | 0.210 | 26809.321 |
 
 **TOP 10 zarizeni, ktere se restartovali v lednu 2017** 
 
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
 --- | ------------------ | ------------------ | --- | ---
-1 | 0.479 | 1.573 | |
-2 | 0.088 | 1.520 | |
-3 | 0.075 | 1.385 | |
-4 | 0.091 | 1.479 | |
-5 | 0.095 | 1.387 | |
+1 | 0.479 | 1.573 | 2.174 | 1.577 |
+2 | 0.088 | 1.520 | 0.058 | 1.669 |
+3 | 0.075 | 1.385 | 0.077 | 2.832 |
+4 | 0.091 | 1.479 | 0.052 | 1.551 |
+5 | 0.095 | 1.387 | 0.067 | 2.395 |
 
 **Kolikrat se celkem kazde zarizeni restartovalo**
 
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
 --- | ------------------ | ------------------ | --- | ---
-1 | 0.047 | 1.042 | |
-2 | 0.054 | 1.030 | |
-3 | 0.052 | 1.033 | |
-4 | 0.058 | 1.131 | |
-5 | 0.056 | 1.032 | |
+1 | 0.047 | 1.042 | 0.062 | 4.321 |
+2 | 0.054 | 1.030 | 0.043 | 2.866 |
+3 | 0.052 | 1.033 | 0.030 | 1.247 |
+4 | 0.058 | 1.131 | 0.043 | 2.115 |
+5 | 0.056 | 1.032 | 0.032 | 1.497 |
 
 # Normal s materializovanymi pohledy
 **tabulka restartu zarizeni (vsechny restarty vsech zarizeni, nic neni agregovano)**
