@@ -35,27 +35,34 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms
 
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
 --- | ------------------ | ------------------ | --- | ---
-1 |  |  | 0.244 | 24332.210 |
+1 |  |  | 0.244	| 24332.210 |
+2 |  |  | 0.208 | 25419.327 |
+3 |  |  | 0.377 | 26453.887 |
+4 |  |  | 0.212 | 26395.068 |
+5 |  |  | 0.367 | 24600.540 |
 
 **Kolikrat se celkem kazde zarizeni restartovalo**
 
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
 --- | ------------------ | ------------------ | --- | ---
 1 |  |  | 0.215 | 23326.126 |
+2 |  |  | 0.192 | 26031.301 |
+3 |  |  | 0.348 | 27227.251 |
+4 |  |  | 0.335 | 26522.748 |
+5 |  |  | 0.337 | 26154.235 |
 
 
 # Prumerne vysledky OLAP
 
 Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
 --- | --- | --- | --- | ---
-Pivot table pro restarty programu | 0.325 ms | 16.442 s |  | 
-TOP 10 zarizeni, ktere se restartovali v lednu 2017 | 0.166 ms | 1.469 ms | | 
-Kolikrat se celkem kazde zarizeni restartovalo | 0.053 ms | 1.054 ms | |
+Pivot table pro restarty programu | 0.325 ms | 16442 ms | 0.3842 ms | 28380.1018 ms |
+TOP 10 zarizeni, ktere se restartovali v lednu 2017 | 0.166 ms | 1.469 ms | 0.4856 ms | 2.0048 ms |
+Kolikrat se celkem kazde zarizeni restartovalo | 0.053 ms | 1.054 ms | 0.042 ms | 2.4092 ms |
 
 # Prumerne vysledky Normal varianty
 
 Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
 --- | --- | --- | --- | ---
-tabulka restartu zarizeni (vsechny restarty vsech zarizeni, nic neni agregovano) | |  | |
-TOP 10 zarizeni, ktere se restartovali v lednu 2017 |  |  | | 
-Kolikrat se celkem kazde zarizeni restartovalo |  |  | | 
+TOP 10 zarizeni, ktere se restartovali v lednu 2017 |  |  | 0.2816 ms | 25440.2064 ms | 
+Kolikrat se celkem kazde zarizeni restartovalo |  |  | 0.2854 ms | 25852.3322 ms | 
