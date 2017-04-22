@@ -1,33 +1,33 @@
 # OLAP
 **Pivot table pro restarty programu**
 
-Nr | PC-1 Planning time (ms) | PC-1 Execution time (s) | PC-2 Planning time (ms) | PC-2 Execution time (s) |
+Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
 --- | ------------------ | ------------------ | --- | ---
-1 | 0.255 | 15.048  | |
-2 | 0.256 | 15.081  | |
-3 | 0.275 | 15.333  | |
-4 | 0.259 | 15.002 | |
-5 | 0.326 | 15.152 | |
+1 | 0.255 | 15048  | 4.507 | 22396.428 |
+2 | 0.256 | 15081  | 0.346 | 22226.995 |
+3 | 0.275 | 15333  | 0.344 | 21739.096 |
+4 | 0.259 | 15002  | 0.348 | 21852.374 |
+5 | 0.326 | 15152 | 0.346 | 23164.299 |
 
 **Serad verze programu dle toho jak casto se restartovali v lednu 2017(od nejmin restartu po nejvic)**
 
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (s) |
 --- | ------------------ | ------------------ | --- | ---
-1 | 0.404 | 0.094  | |
-2 | 0.511 | 0.096 | |
-3 | 0.077 | 0.095 | |
-4 | 0.075 | 0.084 | |
-5 | 0.095 | 0.099  | |
+1 | 0.404 | 0.094  | 0.569 | 0.106 |
+2 | 0.511 | 0.096 | 0.070 | 0.103 |
+3 | 0.077 | 0.095 | 0.070 | 0.102 |
+4 | 0.075 | 0.084 | 0.080 | 0.103 |
+5 | 0.095 | 0.099 | 0.070 | 0.101 |
 
 **Kolikrat se celkem kazda verze restartovala**
 
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (s) |
 --- | ------------------ | ------------------ | --- | ---
-1 | 0.057 | 0.055 | |
-2 | 0.090 | 0.074 | |
-3 | 0.071 | 0.063 | |
-4 | 0.061 | 0.057 | |
-5 | 0.054 | 0.052 | |
+1 | 0.057 | 0.055 | 0.042 | 0.075 |
+2 | 0.090 | 0.074 | 0.042 | 0.074 |
+3 | 0.071 | 0.063 | 0.041 | 0.073 |
+4 | 0.061 | 0.057 | 0.042 | 0.073 |
+5 | 0.054 | 0.052 | 0.043 | 0.078 |
 
 # normal varianta
 **view restartu verzi**
