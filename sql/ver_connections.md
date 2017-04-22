@@ -13,7 +13,7 @@ SELECT program_ver,
        DATE_PART('YEAR',time) as year,
        DATE_PART('MONTH',time) as month,
        DATE_PART('DAY',time) as day,
-       COUNT(*)
+       COUNT(*) as conn_count
 FROM conn_log
 GROUP BY program_ver, rollup(DATE_PART('YEAR',time),DATE_PART('MONTH',time),DATE_PART('DAY',time));
 ```
@@ -29,7 +29,7 @@ WHERE year is null AND month is null AND day is null;
 ### Pocet spojeni v lednu 2017
 
 ```sql
- SELECT program_ver, conn_count
+SELECT program_ver, conn_count
 FROM ver_conns 
 WHERE year=2017 AND month=1  AND day is null;
 ```
