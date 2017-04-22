@@ -59,6 +59,6 @@ Pocet spojeni v lednu 2017 | | | 0.08075 ms | 0.143 ms |
 
 Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
 --- | --- | --- | --- | ---
-Celkovy pocet spojeni pro kazdou verzi | | | | |
-Pocet spojeni v lednu 2017 | | | | |
+Celkovy pocet spojeni pro kazdou verzi | | | 0.047 ms | 1497.6245 ms |
+Pocet spojeni v lednu 2017 | | | 0.07475 ms | 3784.36225 ms |
 
