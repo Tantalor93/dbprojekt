@@ -66,5 +66,4 @@ Kolikrat se celkem kazda verze restartovala | 0.066 ms | 0.06 ms | 0.042 ms | 0.
 Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
 --- | --- | --- | --- | ---
 Serad verze programu dle toho jak casto se restartovali v lednu 2017(od nejmin restartu po nejvic) | 0.26 ms | 14319 ms | 0.329 ms | 21169.0184 ms | 
-Kolikrat se celkem kazda verze restartovala | 0.247 ms | 14713 ms | 0.3386 ms | 22060.684
- ms
+Kolikrat se celkem kazda verze restartovala | 0.247 ms | 14713 ms | 0.3386 ms | 22060.684 ms |
