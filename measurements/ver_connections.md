@@ -50,9 +50,9 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms
 
 Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
 --- | --- | --- | --- | ---
-Pivot table | | | | |
-Pocet spojeni celkem pro kazdou verzi | | | | |
-Pocet spojeni v lednu 2017 | | | | |
+Pivot table | | | 0.08 | 21996.8675 |
+Pocet spojeni celkem pro kazdou verzi | | | 0.041 | 0.14875 |
+Pocet spojeni v lednu 2017 | | | 0.08075 | 0.143 |
 
 
 # Prumerne vysledky Normal
