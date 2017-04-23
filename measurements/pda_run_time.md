@@ -30,6 +30,12 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms
 4 | 0.234 | 18847 | 1.790 | 20729.463 |
 5 | 0.266 | 18681 | 1.318 | 20774.037 |
 
+# Normal s indexy
+
+**pro kazde zarizeni zjistit kolik hodin bylo pouzivano**
+
+zde zadny index nepomohl
+
 # Prumerne vysledky OLAP
 
 Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
