@@ -30,8 +30,6 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms
 5 | 0.054 | 0.052 | 0.043 | 0.078 |
 
 # normal varianta
-**view restartu verzi**
-Rychlost neni dulezita (provadi se jen jednou pri deployi).
 
 **Serad verze programu dle toho jak casto se restartovali v lednu 2017 (od nejmin restartu po nejvic)**
 
@@ -53,6 +51,30 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (s) | PC-2 Planning time (ms)
 4 | 0.244 | 14.653 | 0.334 | 21779.951 |
 5 | 0.246 | 14.533 | 0.335 | 22745.693 |
 
+# normal varianta s indexy
+
+index nad app_run_time
+
+**Serad verze programu dle toho jak casto se restartovali v lednu 2017 (od nejmin restartu po nejvic)**
+
+Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
+--- | ------------------ | ------------------ | --- | ---
+1 |       |       |   0.527    |     18015.174      |
+2 |       |       |   0.530    |     18202.813      |
+3 |       |       |   0.559    |     18262.275     |
+4 |       |       |    0.526   |     18737.569      |
+5 |       |       |   0.532    |     17937.632     |
+
+**Kolikrat se celkem kazda verze restartovala**
+
+Nr | PC-1 Planning time (ms) | PC-1 Execution time (s) | PC-2 Planning time (ms) | PC-2 Execution time (s) |
+--- | ------------------ | ------------------ | --- | ---
+1 |       |       |   0.509    |     20201.882      |
+2 |       |       |    0.503   |      20522.129     |
+3 |       |       |   0.506    |     19580.030      |
+4 |       |       |    0.518    |     19242.078      |
+5 |       |       |   0.512    |      19787.232     |
+
 # Prumerne vysledky OLAP
 
 Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
@@ -67,3 +89,10 @@ Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Ex
 --- | --- | --- | --- | ---
 Serad verze programu dle toho jak casto se restartovali v lednu 2017(od nejmin restartu po nejvic) | 0.26 ms | 14319 ms | 0.329 ms | 21169.0184 ms | 
 Kolikrat se celkem kazda verze restartovala | 0.247 ms | 14713 ms | 0.3386 ms | 22060.684 ms |
+
+ # Prumerne vysledky Normal s indexy
+
+Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
+--- | --- | --- | --- | ---
+Serad verze programu dle toho jak casto se restartovali v lednu 2017(od nejmin restartu po nejvic) | |  | 0.5348 ms|18231.0926 ms | 
+Kolikrat se celkem kazda verze restartovala |  |  | 0.5096 ms | 19866.6702 ms |
