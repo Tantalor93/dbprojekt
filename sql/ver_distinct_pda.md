@@ -80,7 +80,7 @@ CREATE INDEX year_conn ON conn_log(year_idxable(time));
 CREATE INDEX year_conn ON conn_log(month_idxable(time));
 ```
 
-### Pocet spojeni v lednu 2017
+### Pocet ruznych zarizeni v lednu 2017
 
 ```sql
 SELECT program_ver, COUNT(DISTINCT(pda_imei)) as pda_count                                                   
