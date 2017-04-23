@@ -51,6 +51,29 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms
 4 |  |  | 0.335 | 26522.748 |
 5 |  |  | 0.337 | 26154.235 |
 
+# Normal varianta s indexy
+
+jediny index, ktery se zda, ze ovlivni rychlost je index nad *app_run_time*. Index nad time to neovlivní (asi kvůli DATE_PART funkci použité).
+
+**TOP 10 zarizeni, ktere se restartovali v lednu 2017**
+
+Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
+--- | ------------------ | ------------------ | --- | ---
+1 |  |  | 0.406	| 18923.428 |
+2 |  |  | 0.550 | 19503.721 |
+3 |  |  | 0.538 | 18428.466 |
+4 |  |  | 0.536 | 18962.741 |
+5 |  |  | 0.535 | 19025.467 |
+
+**Kolikrat se celkem kazde zarizeni restartovalo**
+
+Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
+--- | ------------------ | ------------------ | --- | ---
+1 |  |  | 0.502  | 19752.007 |
+2 |  |  | 0.504  | 19813.704 |
+3 |  |  | 0.505 | 19945.740 |
+4 |  |  | 0.504 | 19560.724 |
+5 |  |  | 0.502 | 19075.938 |
 
 # Prumerne vysledky OLAP
 
@@ -66,3 +89,10 @@ Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Ex
 --- | --- | --- | --- | ---
 TOP 10 zarizeni, ktere se restartovali v lednu 2017 |  |  | 0.2816 ms | 25440.2064 ms | 
 Kolikrat se celkem kazde zarizeni restartovalo |  |  | 0.2854 ms | 25852.3322 ms | 
+
+# Prumerne vysledky Normal s indexy
+
+Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
+--- | --- | --- | --- | ---
+TOP 10 zarizeni, ktere se restartovali v lednu 2017 |  |  | 0.513 ms | 18968.7646 ms | 
+Kolikrat se celkem kazde zarizeni restartovalo |  |  | 0.5034 ms | 19629.6226 ms | 
