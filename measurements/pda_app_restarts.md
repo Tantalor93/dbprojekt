@@ -53,7 +53,7 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms
 
 # Normal varianta s indexy
 
-jediny index, ktery se zda, ze ovlivni rychlost je index nad *app_run_time*. Index nad time to neovlivní (asi kvůli DATE_PART funkci použité).
+jediny index, ktery se zda, ze ovlivni rychlost je index nad *app_run_time*.
 
 **TOP 10 zarizeni, ktere se restartovali v lednu 2017**
 
