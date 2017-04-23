@@ -46,6 +46,26 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms
 3 |  |  | 0.077 | 3633.736 |
 4 |  |  | 0.075 | 3624.846 |
 
+
+# Normal varianta s indexy
+
+pouziti funkcionalniho indexu nad DATE_PART('YEAR',time) a DATE_PART('MONTH',time)
+
+**Celkovy pocet spojeni pro kazdou verzi**
+
+stejne jak normal varianta 
+
+
+**Pocet spojeni v lednu 2017**
+
+Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
+--- | ------------------ | ------------------ | --- | ---
+1 |  |  | 0.241 | 1967.429 |
+2 |  |  | 0.125 | 1959.028 |
+3 |  |  | 0.205 | 1980.402 |
+4 |  |  | 0.208 | 1968.766 |
+
+
 # Prumerne vysledky OLAP
 
 Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
@@ -62,3 +82,8 @@ Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Ex
 Celkovy pocet spojeni pro kazdou verzi | | | 0.047 ms | 1497.6245 ms |
 Pocet spojeni v lednu 2017 | | | 0.07475 ms | 3784.36225 ms |
 
+# Prumerne vysledky Normal s indexy
+
+Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
+--- | --- | --- | --- | ---
+Pocet spojeni v lednu 2017 | | | 0.19475 ms | 1968.90625 ms |
