@@ -46,6 +46,29 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms
 3 |  |  | 0.080 | 14408.162 |
 4 |  |  | 0.079 | 15259.401 |
 
+# Normal varianta s indexy
+
+indexy nad program_ver a funkcionalni indexy nad DATE_PART('YEAR',time) a DATE_PART('MONTH',time)
+
+**Celkovy pocet ruznych zarizeni pro kazdou verzi**
+
+Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
+--- | ------------------ | ------------------ | --- | ---
+1 |  |  | 0.100 | 7996.412 |
+2 |  |  | 0.099 | 8009.561 |
+3 |  |  | 0.102 | 7273.558 |
+4 |  |  | 0.101 | 7327.604 |
+
+
+**Pocet ruznych zarizeni v lednu 2017**
+
+Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
+--- | ------------------ | ------------------ | --- | ---
+1 |  |  | 0.205 | 12867.493 |
+2 |  |  | 0.210 | 12358.442 |
+3 |  |  | 0.209 | 11521.614 |
+4 |  |  | 0.216 | 11533.877 |
+
 # Prumerne vysledky OLAP
 
 Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
@@ -60,3 +83,11 @@ Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Ex
 --- | --- | --- | --- | ---
 Celkovy pocet ruznych zarizeni pro kazdou verzi | | | 0.0495 ms | 13184.09125 ms |
 Pocet ruznych zarizeni v lednu 2017 | | | 0.0785 ms | 14884.031 ms |
+
+
+# Prumerne vysledky Normal s indexy
+
+Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
+--- | --- | --- | --- | ---
+Celkovy pocet ruznych zarizeni pro kazdou verzi | | | 0.1005 ms | 7651.78375 ms |
+Pocet ruznych zarizeni v lednu 2017 | | | 0.21 ms | 12070.3565 ms |
