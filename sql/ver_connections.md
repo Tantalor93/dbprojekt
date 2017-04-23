@@ -77,7 +77,7 @@ LANGUAGE SQL WITH (iscachable)
 
 ```sql
 CREATE INDEX year_conn ON conn_log(year_idxable(time));
-CREATE INDEX year_conn ON conn_log(month_idxable(time));
+CREATE INDEX month_conn ON conn_log(month_idxable(time));
 ```
 
 ### Pocet spojeni v lednu 2017
