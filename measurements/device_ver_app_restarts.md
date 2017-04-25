@@ -3,19 +3,19 @@
 
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
 --- | ------------------ | ------------------ | --- | ---
-1 |  |  |  |  |
-2 |  |  |  |  |
-3 |  |  |  |  |
-4 |  |  |  |  |
+1 |  |  | 0.376 | 21578.199 |
+2 |  |  | 0.377 | 20876.688 |
+3 |  |  | 0.386 | 21106.686 |
+4 |  |  | 0.375 | 21590.108 |
 
 **Ktery typ zarizeni s jakou verzi programu se nejcasteji restartoval v lednu 2017**
 
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (s) |
 --- | ------------------ | ------------------ | --- | ---
-1 |  |  |  |  |
-2 |  |  |  |  |
-3 |  |  |  |  |
-4 |  |  |  |  |
+1 |  |  | 0.099 | 1.180 |
+2 |  |  | 0.100 | 1.113 |
+3 |  |  | 0.752 | 1.245 |
+4 |  |  | 0.099 | 1.107 |
 
 # normal varianta
 
@@ -23,10 +23,10 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms
 
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
 --- | ------------------ | ------------------ | --- | ---
-1 |  |  |  |  |
-2 |  |  |  |  |
-3 |  |  |  |  |
-4 |  |  |  |  |
+1 |  |  | 0.393 | 20363.304 |
+2 |  |  | 0.400 | 20864.075 |
+3 |  |  | 0.395 | 20379.065 |
+4 |  |  | 0.391 | 20449.423 |
 
 # normal varianta s indexy
 
