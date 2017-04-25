@@ -30,6 +30,8 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms
 
 # normal varianta s indexy
 
+index nad app_run_time
+
 **Ktery typ zarizeni s jakou verzi programu se nejcasteji restartoval v lednu 2017**
 
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
