@@ -36,10 +36,10 @@ index nad app_run_time
 
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
 --- | ------------------ | ------------------ | --- | ---
-1 |  |  |  |  |
-2 |  |  |  |  |
-3 |  |  |  |  |
-4 |  |  |  |  |
+1 |  |  | 0.447 | 18947.593 |
+2 |  |  | 0.448 | 18892.459 |
+3 |  |  | 0.449 | 18373.732 |
+4 |  |  | 0.281 | 18333.301 |
 
 # Prumerne vysledky OLAP
 
