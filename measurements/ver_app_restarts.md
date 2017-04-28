@@ -43,13 +43,13 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms
 
 **Kolikrat se celkem kazda verze restartovala**
 
-Nr | PC-1 Planning time (ms) | PC-1 Execution time (s) | PC-2 Planning time (ms) | PC-2 Execution time (s) |
+Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (s) |
 --- | ------------------ | ------------------ | --- | ---
-1 | 0.250 | 14.816 | 0.342 | 21943.105 |
-2 | 0.251 | 14.733 | 0.346 | 21816.561 |
-3 | 0.245 | 14.832 | 0.336 | 22018.110 |
-4 | 0.244 | 14.653 | 0.334 | 21779.951 |
-5 | 0.246 | 14.533 | 0.335 | 22745.693 |
+1 | 0.250 | 14816 | 0.342 | 21943.105 |
+2 | 0.251 | 14733 | 0.346 | 21816.561 |
+3 | 0.245 | 14832 | 0.336 | 22018.110 |
+4 | 0.244 | 14653 | 0.334 | 21779.951 |
+5 | 0.246 | 14533 | 0.335 | 22745.693 |
 
 # normal varianta s indexy
 
