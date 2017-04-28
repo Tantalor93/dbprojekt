@@ -49,7 +49,7 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms
 
 # Normal varianta s indexy
 
-pouziti funkcionalniho indexu nad DATE_PART('YEAR',time) a DATE_PART('MONTH',time)
+pouziti indexu nad time v tabulce conn_log
 
 **Celkovy pocet spojeni pro kazdou verzi**
 
