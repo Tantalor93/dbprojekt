@@ -48,7 +48,7 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms
 
 # Normal varianta s indexy
 
-indexy nad program_ver a funkcionalni indexy nad DATE_PART('YEAR',time) a DATE_PART('MONTH',time)
+indexy nad program_ver a time
 
 **Celkovy pocet ruznych zarizeni pro kazdou verzi**
 
