@@ -59,21 +59,21 @@ index nad app_run_time
 
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
 --- | ------------------ | ------------------ | --- | ---
-1 |       |       |   0.527    |     18015.174      |
-2 |       |       |   0.530    |     18202.813      |
-3 |       |       |   0.559    |     18262.275     |
-4 |       |       |    0.526   |     18737.569      |
-5 |       |       |   0.532    |     17937.632     |
+1 | 1.685 | 14415.719 |   0.527    |     18015.174      |
+2 | 0.340 | 13622.130 |   0.530    |     18202.813      |
+3 | 0.330 | 13782.417 |   0.559    |     18262.275     |
+4 | 0.324 | 13764.140 |    0.526   |     18737.569      |
+5 | 0.318 | 13799.745 |   0.532    |     17937.632     |
 
 **Kolikrat se celkem kazda verze restartovala**
 
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (s) | PC-2 Planning time (ms) | PC-2 Execution time (s) |
 --- | ------------------ | ------------------ | --- | ---
-1 |       |       |   0.509    |     20201.882      |
-2 |       |       |    0.503   |      20522.129     |
-3 |       |       |   0.506    |     19580.030      |
-4 |       |       |    0.518    |     19242.078      |
-5 |       |       |   0.512    |      19787.232     |
+1 | 0.341 | 14214.651 |   0.509    |     20201.882      |
+2 | 0.361 | 14383.479 |    0.503   |      20522.129     |
+3 | 0.309 | 14498.456 |   0.506    |     19580.030      |
+4 | 0.317 | 14393.118 |    0.518    |     19242.078      |
+5 | 0.324 | 14523.185 |   0.512    |      19787.232     |
 
 # Prumerne vysledky OLAP
 
@@ -94,5 +94,5 @@ Kolikrat se celkem kazda verze restartovala | 0.247 ms | 14713 ms | 0.3386 ms | 
 
 Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
 --- | --- | --- | --- | ---
-Serad verze programu dle toho jak casto se restartovali v lednu 2017(od nejmin restartu po nejvic) | |  | 0.5348 ms|18231.0926 ms | 
-Kolikrat se celkem kazda verze restartovala |  |  | 0.5096 ms | 19866.6702 ms |
+Serad verze programu dle toho jak casto se restartovali v lednu 2017(od nejmin restartu po nejvic) | 0.318 ms | 13799.745 ms | 0.5348 ms|18231.0926 ms | 
+Kolikrat se celkem kazda verze restartovala | 0.324 ms | 14523.185 ms | 0.5096 ms | 19866.6702 ms |
