@@ -60,10 +60,10 @@ stejne jak normal varianta
 
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
 --- | ------------------ | ------------------ | --- | ---
-1 |  |  | 0.241 | 1967.429 |
-2 |  |  | 0.125 | 1959.028 |
-3 |  |  | 0.205 | 1980.402 |
-4 |  |  | 0.208 | 1968.766 |
+1 | 0.759 | 1460.571 | 0.241 | 1967.429 |
+2 | 0.148 | 1440.640 | 0.125 | 1959.028 |
+3 | 0.149 | 1430.480 | 0.205 | 1980.402 |
+4 | 0.133 | 1406.190 | 0.208 | 1968.766 |
 
 
 # Prumerne vysledky OLAP
@@ -86,4 +86,4 @@ Pocet spojeni v lednu 2017 | 0.0925 ms | 8439.404 ms | 0.07475 ms | 3784.36225 m
 
 Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
 --- | --- | --- | --- | ---
-Pocet spojeni v lednu 2017 | | | 0.19475 ms | 1968.90625 ms |
+Pocet spojeni v lednu 2017 | 0.29725 ms | 1434.47025 ms | 0.19475 ms | 1968.90625 ms |
