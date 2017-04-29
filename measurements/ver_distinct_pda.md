@@ -81,7 +81,7 @@ Pocet ruznych zarizeni v lednu 2017 | 0.07875 ms | 0.089 ms | 0.066 ms | 0.1225 
 
 Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
 --- | --- | --- | --- | ---
-Celkovy pocet ruznych zarizeni pro kazdou verzi | 0.17625 ms | 0.07925 | 0.0495 ms | 13184.09125 ms |
+Celkovy pocet ruznych zarizeni pro kazdou verzi | 0.17625 ms | 18172.56925 ms | 0.0495 ms | 13184.09125 ms |
 Pocet ruznych zarizeni v lednu 2017 | 0.08675 ms | 18257.92325 ms | 0.0785 ms | 14884.031 ms |
 
 
