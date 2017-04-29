@@ -41,10 +41,10 @@ Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms
 
 Nr | PC-1 Planning time (ms) | PC-1 Execution time (ms) | PC-2 Planning time (ms) | PC-2 Execution time (ms) |
 --- | ------------------ | ------------------ | --- | ---
-1 | 0.088 | 8652.474 | 0.074 | 3643.593 |
-2 | 0.089 | 8358.984 | 0.073 | 4235.274 |
-3 | 0.108 | 8395.901 | 0.077 | 3633.736 |
-4 | 0.085 | 8350.257 | 0.075 | 3624.846 |
+1 | 0.101 | 1490.168 | 0.074 | 3643.593 |
+2 | 0.073 | 1464.970 | 0.073 | 4235.274 |
+3 | 0.077 | 1484.906 | 0.077 | 3633.736 |
+4 | 0.072 | 1514.256 | 0.075 | 3624.846 |
 
 
 # Normal varianta s indexy
@@ -80,7 +80,7 @@ Pocet spojeni v lednu 2017 | 0.0755 ms | 0.08725 ms | 0.08075 ms | 0.143 ms |
 Prikaz | PC-1 Planning time | PC-1 Execution Time | PC-2 Planning time | PC-2 Execution Time |
 --- | --- | --- | --- | ---
 Celkovy pocet spojeni pro kazdou verzi | 0.06425 ms | 1207.59925 ms | 0.047 ms | 1497.6245 ms |
-Pocet spojeni v lednu 2017 | 0.0925 ms | 8439.404 ms | 0.07475 ms | 3784.36225 ms |
+Pocet spojeni v lednu 2017 | 0.08075 ms | 1488.575 ms | 0.07475 ms | 3784.36225 ms |
 
 # Prumerne vysledky Normal s indexy
 
