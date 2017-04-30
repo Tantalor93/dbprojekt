@@ -1,6 +1,6 @@
 ## Motivace
 
-pro kazde zarizeni zjistit pocet restartu programu
+zjistit, ktery typ zarizeni  s jakou verzi se nejcasteji restartoval
 
 ## OLAP varianta
 ### Pivot table pro restarty programu
